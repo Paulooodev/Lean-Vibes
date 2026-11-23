@@ -7,6 +7,8 @@ import { ArrowDown, Play } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { MaskText } from "../motion/MaskText";
 import { useLoading } from "../providers/LoadingProvider";
+import { MagneticButton } from "../motion/MagneticButton";
+import { ButtonLink } from "../ui/Button";
 import { EASE_OUT_EXPO } from "@/lib/motion";
 import { artists } from "@/data/artists";
 import { getPrimaryListenLink, releases } from "@/data/releases";
@@ -95,7 +97,14 @@ export function Hero(){
                   </p>
                   <div className="mt-8 flex flex-wrap gap-3">
                     {/* Various components to be added later on */}
-                    Latest Releases
+                    <MagneticButton>
+                      <ButtonLink href="#roster" variant="light" size="lg" icon={ArrowDown}>
+                        Explore Roster
+                      </ButtonLink>
+                    </MagneticButton>
+                    <ButtonLink href="#releases" variant="outline" size="lg">
+                      Latest Releases
+                    </ButtonLink>
                   </div>
                 </motion.div> 
 
