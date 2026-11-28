@@ -43,7 +43,8 @@ export const releases: Release[] = [
           type: "Single", 
           year: 2023, 
           cover: unsplash("photo-1541701494587-cb58502866ab", 800, 800), 
-          links: LINKS 
+          links: LINKS,
+          featured: true 
         },
         { 
           id: "first-light", 
@@ -53,7 +54,30 @@ export const releases: Release[] = [
           type: "EP", 
           year: 2025, 
           cover: unsplash("photo-1558591710-4b4a1ae0f04d", 800, 800), 
-          links: LINKS 
+          links: LINKS,
+          featured: true 
+        },
+        { 
+          id: "diaspora-tapes", 
+          title: "Diaspora Tapes", 
+          artistSlug: "dxrk", 
+          artistName: "DXRK", 
+          type: "EP", 
+          year: 2024, 
+          cover: unsplash("photo-1579546929518-9e396f3cc809", 800, 800), 
+          links: LINKS,
+          featured: true 
+        },
+        { 
+          id: "crown-theory", 
+          title: "Crown Theory", 
+          artistSlug: "kxng-sola", 
+          artistName: "KXNG Sola", 
+          type: "Album", 
+          year: 2024, 
+          cover: unsplash("photo-1550684848-fac1c5b4e853", 800, 800), 
+          links: LINKS, 
+          featured: true 
         },
 ];
 

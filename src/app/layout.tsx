@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/data/site";
+import { LoadingProvider } from "@/components/providers/LoadingProvider";
 import { NavBar } from "@/components/layout/Navbar";
 
 const sora = Sora({
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
          <noscript>
             <style>{`#preloader{display:none!important}`}</style>
         </noscript>
+        <LoadingProvider>
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-ink"
@@ -47,7 +49,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           Skip to content
         </a>
         <NavBar />
-        {children}
+          {children}
+        </LoadingProvider>
       </body>
     </html>
   );
